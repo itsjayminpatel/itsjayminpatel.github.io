@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jaymin Patel | Mechanical Engineer</title>
+<meta name="description" content="Jaymin Patel, Mechanical Engineer in Houston, TX. Piping systems, pressure vessels, P&IDs and IFC/IFA drawing packages for oil & gas and data center projects.">
+<meta property="og:title" content="Jaymin Patel | Mechanical Engineer">
+<meta property="og:description" content="Piping systems, pressure vessels and engineering deliverables for oil & gas and data center projects. Houston, TX.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://itsjayminpatel.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5cad'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='white' text-anchor='middle'%3EJP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --ink: #0f1720;
+  --muted: #5a6573;
+  --line: #e2e6eb;
+  --grid: rgba(11, 92, 173, 0.06);
+  --accent: #0b5cad;
+  --accent-soft: #e6f0fa;
+  --accent-ink: #ffffff;
+  --shadow: 0 1px 2px rgba(15, 23, 32, .04), 0 8px 24px rgba(15, 23, 32, .06);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1016;
+    --surface: #121a23;
+    --ink: #e8edf2;
+    --muted: #93a0ae;
+    --line: #223040;
+    --grid: rgba(90, 160, 230, 0.07);
+    --accent: #5aa6ec;
+    --accent-soft: #15283b;
+    --accent-ink: #0b1016;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.mono { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+/* Nav */
+nav {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.brand { font-weight: 700; color: var(--ink); letter-spacing: -.01em; }
+.brand span { color: var(--accent); }
+nav ul { list-style: none; display: flex; gap: 24px; margin: 0; padding: 0; }
+nav ul a { color: var(--muted); font-size: 14px; font-weight: 500; }
+nav ul a:hover { color: var(--ink); text-decoration: none; }
+
+/* Hero */
+.hero {
+  position: relative;
+  padding: 96px 0 80px;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  border-bottom: 1px solid var(--line);
+}
+.tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; color: var(--muted);
+  border: 1px solid var(--line); background: var(--surface);
+  padding: 6px 12px; border-radius: 999px;
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #1f9d55; }
+h1 {
+  font-size: clamp(40px, 7vw, 68px);
+  line-height: 1.05; letter-spacing: -.03em;
+  margin: 20px 0 12px; font-weight: 800;
+}
+.role { font-size: clamp(18px, 2.4vw, 22px); color: var(--muted); margin: 0 0 24px; font-weight: 500; }
+.role b { color: var(--ink); font-weight: 600; }
+.lede { max-width: 680px; font-size: 17px; color: var(--muted); margin: 0 0 32px; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 18px; border-radius: 8px; font-weight: 600; font-size: 15px;
+  border: 1px solid var(--line); color: var(--ink); background: var(--surface);
+}
+.btn:hover { text-decoration: none; border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+/* Stats */
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+  margin-top: 56px; box-shadow: var(--shadow);
+}
+.stat { background: var(--surface); padding: 20px 22px; }
+.stat .n { font-size: 28px; font-weight: 800; letter-spacing: -.02em; }
+.stat .l { font-size: 13px; color: var(--muted); }
+
+/* Sections */
+section { padding: 80px 0; border-bottom: 1px solid var(--line); }
+.eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+h2 { font-size: 32px; letter-spacing: -.02em; margin: 8px 0 40px; }
+
+/* Timeline */
+.job { display: grid; grid-template-columns: 200px 1fr; gap: 32px; padding: 28px 0; border-top: 1px solid var(--line); }
+.job:first-of-type { border-top: 0; padding-top: 0; }
+.when { font-size: 13px; color: var(--muted); padding-top: 4px; }
+.job h3 { margin: 0; font-size: 20px; letter-spacing: -.01em; }
+.org { color: var(--muted); margin: 2px 0 14px; font-size: 15px; }
+.org b { color: var(--ink); font-weight: 600; }
+.job ul { margin: 0; padding-left: 18px; color: var(--muted); }
+.job li { margin: 6px 0; }
+.job li::marker { color: var(--accent); }
+
+/* Projects */
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 28px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+}
+.card .meta { font-size: 12px; color: var(--muted); }
+.card h3 { margin: 10px 0 10px; font-size: 20px; letter-spacing: -.01em; }
+.card p { color: var(--muted); margin: 0 0 20px; }
+.specs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.spec { font-size: 12px; padding: 4px 10px; border-radius: 6px; background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.skill { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+.skill h4 { margin: 0 0 14px; font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-size: 13px; padding: 5px 11px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); }
+
+/* Education */
+.edu { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.edu .card h3 { font-size: 18px; }
+
+/* Contact */
+.contact { text-align: center; padding: 96px 0; border-bottom: 0; }
+.contact h2 { margin-bottom: 12px; }
+.contact p { color: var(--muted); margin: 0 auto 32px; max-width: 520px; }
+.contact .cta { justify-content: center; }
+footer { padding: 28px 0; color: var(--muted); font-size: 13px; text-align: center; border-top: 1px solid var(--line); }
+
+@media (max-width: 760px) {
+  nav ul { display: none; }
+  .hero { padding: 64px 0 56px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .job { grid-template-columns: 1fr; gap: 8px; }
+  .cards, .skills, .edu { grid-template-columns: 1fr; }
+  section { padding: 56px 0; }
+  .wrap { padding: 0 16px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Jaymin<span>.</span>Patel</a>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="tag"><span class="dot"></span>Houston, TX</span>
+    <h1>Jaymin Patel</h1>
+    <p class="role"><b>Mechanical Engineer</b> · Piping Systems &amp; Pressure Vessels</p>
+    <p class="lede">4+ years delivering piping systems, pressure vessels and engineering deliverables for oil &amp; gas and data center projects. I develop and revise P&amp;IDs and PFDs, prepare IFA/IFC drawing packages and specifications, and coordinate with clients, fabricators and field teams from design through as-built.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:Jayminpatel9498@gmail.com">Get in touch</a>
+      <a class="btn" href="https://linkedin.com/in/jayminpatel0409" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/itsjayminpatel" target="_blank" rel="noopener">GitHub</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">6+</div><div class="l">Concurrent oil &amp; gas projects</div></div>
+      <div class="stat"><div class="n">35%</div><div class="l">Faster drawing development</div></div>
+      <div class="stat"><div class="n">$2.5M+</div><div class="l">New project pursuits supported</div></div>
+      <div class="stat"><div class="n">$50K</div><div class="l">Annual testing cost cut</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="eyebrow">Experience</div>
+    <h2>Where I've worked</h2>
+
+    <div class="job">
+      <div class="when mono">Sep 2024 – Present</div>
+      <div>
+        <h3>Project Engineer</h3>
+        <p class="org"><b>Piping Technology &amp; Products</b> · Houston, TX</p>
+        <ul>
+          <li>Led mechanical engineering scope on 6+ concurrent oil &amp; gas projects including process piping (ASME B31.3), pressure vessels (ASME VIII Div.1), pipe spools, and structural support design.</li>
+          <li>Managed full project lifecycle from engineering study through P&amp;IDs to IFC/IFA document release, ensuring client specifications, regulatory requirements, and project schedules.</li>
+          <li>Conducted engineering site surveys, data collection, and as-built verification at active facilities; attended design review meetings with client stakeholders.</li>
+          <li>Reduced drawing development by 35% through parametric 3D model libraries &amp; calculations for frequent designs.</li>
+          <li>Supported preparation of engineering &amp; cost proposals; contributed to successful pursuit of $2.5M+ in new projects.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when mono">Jan 2024 – May 2024</div>
+      <div>
+        <h3>Manufacturing Engineer Intern</h3>
+        <p class="org"><b>AMOGY</b> · Houston, TX</p>
+        <ul>
+          <li>Resolved 16+ technical issues for $1M pilot manufacturing programs using PFD &amp; PFMEA problem-solving methods.</li>
+          <li>Designed a 43K sq. ft. manufacturing facility layout using AutoCAD &amp; 5S, optimizing process flow and material routing.</li>
+          <li>Led design reviews adhering to NPI, streamlined DFM analysis and simplified vendor drawings for improved clarity.</li>
+          <li>Implemented Plan-Do-Check-Act, reducing material retrieval times by 25% and enhancing fabrication of the vessel body.</li>
+          <li>Created &amp; validated 3D-printed fixture components using SolidWorks, increasing testing reliability by 20% &amp; reducing lead time.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when mono">May 2023 – Dec 2023</div>
+      <div>
+        <h3>Mechanical Engineer Co-op</h3>
+        <p class="org"><b>Formlabs</b> · Boston, MA</p>
+        <ul>
+          <li>Executed RCA and SPC analysis using Pareto Analysis, resolving 28+ engineering issues &amp; managing critical Engineering Change Orders for PLM and inventory alignment.</li>
+          <li>Prepared precise engineering drawings ensuring 100% compliance, reducing manufacturing errors and accelerating time-to-market by 15%; maintained BOM for 19+ assemblies.</li>
+          <li>Developed a quality test setup for a new nozzle design, optimizing fluid flow and cutting annual testing costs by $50,000 through resin cartridge reuse and process standardization.</li>
+          <li>Instituted Poka-Yoke error-proofing in a tank module positioning fixture, preventing misalignment defects.</li>
+          <li>Reduced procurement costs by 26% through improved material tracking and BOM governance across multiple product assemblies.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when mono">Jun 2020 – Dec 2021</div>
+      <div>
+        <h3>Mechanical Engineer</h3>
+        <p class="org"><b>Shreedhar Printers</b> · India</p>
+        <ul>
+          <li>Launched a new manufacturing line amid COVID-19 supply chain disruptions, achieving $88K in savings while maintaining production quality standards.</li>
+          <li>Designed a modular handpiece clone that cut product testing cycles by 2 weeks, enabling faster iterations &amp; earlier market entry.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="eyebrow">Projects</div>
+    <h2>Selected work</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="meta mono">Jun 2025 – Dec 2025 · SWECO Fab Division</div>
+        <h3>Gulf of Mexico Production Platform Piping Redesign</h3>
+        <p>Managed the full piping redesign for an offshore production platform: 14 pipe spools, 3 pressure vessels, and the support structural steel package. Delivered the IFC package on time and 5% under budget.</p>
+        <div class="specs">
+          <span class="spec">14 pipe spools</span>
+          <span class="spec">3 pressure vessels</span>
+          <span class="spec">IFC on time</span>
+          <span class="spec">5% under budget</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="meta mono">Jan 2018 – Dec 2020 · SAE BAJA</div>
+        <h3>All-Terrain Vehicle, Project Engineering Head</h3>
+        <p>Directed a 25-member cross-functional team to design and manufacture an ATV within a 6-month timeline using Lean Six Sigma methodology, achieving a 28 lb structural weight reduction.</p>
+        <div class="specs">
+          <span class="spec">25-member team</span>
+          <span class="spec">6-month build</span>
+          <span class="spec">−28 lb structure</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow">Skills</div>
+    <h2>Toolkit</h2>
+    <div class="skills">
+      <div class="skill">
+        <h4>Mechanical Design</h4>
+        <div class="chips"><span class="chip">P&amp;IDs</span><span class="chip">PFDs</span><span class="chip">Piping Systems</span><span class="chip">Pressure Vessels</span><span class="chip">Data Center</span><span class="chip">DFMEA</span><span class="chip">RCA</span></div>
+      </div>
+      <div class="skill">
+        <h4>CAD &amp; Documentation</h4>
+        <div class="chips"><span class="chip">AutoCAD</span><span class="chip">SolidWorks &amp; PDM</span><span class="chip">Onshape</span><span class="chip">DraftSight</span><span class="chip">IFA/IFC Drawing Preparation</span></div>
+      </div>
+      <div class="skill">
+        <h4>Standards &amp; Codes</h4>
+        <div class="chips"><span class="chip">ASME B31.3</span><span class="chip">ASME VIII</span><span class="chip">Lean Six Sigma</span><span class="chip">8D</span><span class="chip">FMEA</span></div>
+      </div>
+      <div class="skill">
+        <h4>Data &amp; Analysis</h4>
+        <div class="chips"><span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">Power BI</span><span class="chip">SAP</span><span class="chip">MS Office Suite</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="eyebrow">Education</div>
+    <h2>Background</h2>
+    <div class="edu">
+      <article class="card">
+        <div class="meta mono">Jan 2022 – May 2024</div>
+        <h3>M.S. in Industrial Engineering</h3>
+        <p>Texas A&amp;M University, College Station</p>
+        <div class="specs"><span class="spec">Certified Lean Six Sigma Green Belt</span></div>
+      </article>
+      <article class="card">
+        <div class="meta mono">Aug 2016 – Jun 2020</div>
+        <h3>B.E. in Mechanical Engineering</h3>
+        <p>Gujarat Technological University</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2>Let's talk</h2>
+    <p>Open to mechanical, piping and project engineering roles in oil &amp; gas, energy and data center work.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:Jayminpatel9498@gmail.com">Jayminpatel9498@gmail.com</a>
+      <a class="btn" href="https://linkedin.com/in/jayminpatel0409" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="y">2026</span> Jaymin Patel · Houston, TX</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
